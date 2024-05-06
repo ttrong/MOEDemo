@@ -1,0 +1,12 @@
+import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart' as path_provider;
+import 'package:moe_cfims/infrastructure/account/account_entity.dart';
+import 'package:moe_cfims/infrastructure/core/hive_box_names.dart';
+
+Future<void> setupHive() async {
+  final appDocumentDir = await path_provider.getApplicationDocumentsDirectory();
+  Hive.init(appDocumentDir.path);
+  Hive.registerAdapter(AccountEntityAdapter());
+  await Hive.openBox(BoxNames.settingsBox);
+  await Hive.openBox<AccountEntity>(BoxNames.currentUser);
+}

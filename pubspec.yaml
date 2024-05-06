@@ -1,0 +1,100 @@
+name: moe_cfims
+description: "A new MOE-CFIMS project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+  
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_dotenv: ^5.1.0
+  dio: ^5.4.3+1
+  flutter_bloc: ^8.1.5
+  freezed_annotation: ^2.4.1
+  hive: ^2.2.3
+  image_cropper: ^5.0.1
+  image_picker: ^1.1.0
+  json_annotation: ^4.8.1
+  path_provider: ^2.1.3
+  webview_flutter: ^4.7.0
+  flutter_hooks: ^0.20.5
+  flutter_typeahead: ^5.2.0
+  another_flushbar: ^1.12.30
+  calendar_time: ^2.3.0
+  collection: ^1.18.0
+  amplify_flutter: ^1.8.0
+  amplify_auth_cognito: ^1.8.0
+  dartz: ^0.10.1
+  injectable: ^2.4.1
+  get_it: ^7.7.0
+  cyclop: ^0.7.0
+  http_parser: ^4.0.2
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  freezed: ^2.5.2
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.9
+  injectable_generator: ^2.6.1
+  hive_generator: ^2.0.1
+  flutter_native_splash: ^2.4.0
+  bloc_test: ^9.1.7
+  flutter_launcher_icons: ^0.13.1
+
+analyzer:
+  errors:
+    invalid_annotation_target: ignore
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env.development
+    - .env.production
+    - assets/icons/icon.png
+    - assets/images/background_login.jpg
+
+  fonts:
+    - family: Flaticon
+      fonts:
+        - asset: assets/fonts/Flaticon.ttf
+    - family: Flaticon2
+      fonts:
+        - asset: assets/fonts/Flaticon2.ttf
+    - family: ionicons
+      fonts:
+        - asset: assets/fonts/ionicons.ttf
+    - family: FontAwesome5Free-Solid
+      fonts:
+        - asset: assets/fonts/FontAwesome5Free-Solid.otf
+    - family: IBMPlexSans-Bold
+      fonts:
+        - asset: assets/fonts/IBMPlexSans-Bold.ttf
+    - family: IBMPlexSans-Light
+      fonts:
+        - asset: assets/fonts/IBMPlexSans-Light.ttf
+    - family: IBMPlexSans-Medium
+      fonts:
+        - asset: assets/fonts/IBMPlexSans-Medium.ttf
+    - family: IBMPlexSans-Regular
+      fonts:
+        - asset: assets/fonts/IBMPlexSans-Regular.ttf
+    - family: IBMPlexSans-SemiBold
+      fonts:
+        - asset: assets/fonts/IBMPlexSans-SemiBold.ttf
+
+flutter_native_splash:
+  color: "#003D79"
+  image: assets/logo.png
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/icon.png"
